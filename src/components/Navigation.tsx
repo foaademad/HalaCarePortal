@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { useTheme } from "@/contexts/ThemeContext";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Menu, X, Sun, Moon, Languages, Heart } from "lucide-react";
+import logo from "@/Assets/logo.png";
 
 export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -29,17 +30,7 @@ export default function Navigation() {
           {/* Logo */}
           <Link href="/" onClick={closeMobileMenu}>
             <div className={`flex items-center space-x-3 ${isRTL ? 'space-x-reverse' : ''}`}>
-              <div className="w-12 h-12 gradient-bg rounded-xl flex items-center justify-center">
-                <Heart className="text-white" size={24} />
-              </div>
-              <div>
-                <h1 className="text-2xl font-bold text-primary dark:text-primary-light">
-                  {t("site.name")}
-                </h1>
-                <p className="text-xs text-gray-500 dark:text-gray-400">
-                  {t("site.subtitle")}
-                </p>
-              </div>
+              <img src={logo} alt="Hala Care" width={150} />
             </div>
           </Link>
 

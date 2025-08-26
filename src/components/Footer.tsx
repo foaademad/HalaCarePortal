@@ -1,6 +1,7 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Link } from "wouter";
 import { Heart, Facebook, Twitter, Instagram, Linkedin, MapPin, Phone, Mail, Clock } from "lucide-react";
+import logo from "@/Assets/logo.png";
 
 export default function Footer() {
   const { t, isRTL } = useLanguage();
@@ -28,13 +29,7 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <div className={`flex items-center space-x-3 mb-6 ${isRTL ? 'space-x-reverse' : ''}`}>
-              <div className="w-12 h-12 gradient-bg rounded-xl flex items-center justify-center">
-                <Heart className="text-white" size={24} />
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold">{t("site.name")}</h3>
-                <p className="text-sm text-gray-400">{t("site.subtitle")}</p>
-              </div>
+              <img src={logo} alt="Hala Care" width={200} />
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed">
               {t("site.name") === "Hala Care" ? 
